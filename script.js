@@ -7,12 +7,12 @@ let words = [
 ];
 
 let styles = [
-    { font: "fontC", color: "colorBW", name: "Cursive + BW" },
-    { font: "fontC", color: "colorYB", name: "Cursive + YB" },
-    { font: "fontS", color: "colorBW", name: "SerifSans + BW" },
-    { font: "fontS", color: "colorYB", name: "SerifSans + YB" },
-    { font: "fontM", color: "colorBW", name: "Monospace + BW" },
-    { font: "fontM", color: "colorYB", name: "Monospace + YB" }
+    { font: "fontC", color: "colorD", name: "Cursive + Dark" },
+    { font: "fontC", color: "colorL", name: "Cursive + Light" },
+    { font: "fontS", color: "colorD", name: "SerifSans + Dark" },
+    { font: "fontS", color: "colorL", name: "SerifSans + Light" },
+    { font: "fontM", color: "colorD", name: "Monospace + Dark" },
+    { font: "fontM", color: "colorL", name: "Monospace + Light" }
 ];
 
 let treatments = [];

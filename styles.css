@@ -13,16 +13,14 @@ li {
     max-width: 50ch;
     font-size: 20px;
     border: 1px solid #000;
-}
+}i
 .fontC { font-family: 'Brush Script MT', cursive;
         font-size: 24px }
-.fontS { font-family: 'Arial', sans-serif; }
+.fontS { font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif; }
 .fontM { font-family: 'Courier New', monospace; }
-.colorBW { 
-    color: black; 
-    background-color: white;
+.colorD { 
+    color: darkslateblue; 
 }
-.colorYB { 
-    color: yellow; 
-    background-color: darkblue;
+.colorL { 
+    color: orange; 
 }
