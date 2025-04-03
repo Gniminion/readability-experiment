@@ -10,6 +10,7 @@ li {
     padding: 32px;
     margin: 40px auto;
     width: 60%;
+    max-width: 55ch;
     font-size: 20px;
     border: 1px solid #000;
 }
