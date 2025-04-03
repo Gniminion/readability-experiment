@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Readability Experiment</title>
+</head>
+<body>
+    <div>
+        <h2>Thanks for taking part in this experiment!</h2>
+        <h3> Please read the instructions below before starting :]</h3>
+        <ul>
+            <li>Make sure you are in a quiet space with minimal distractions. </li>
+            <li>You will be shown 6 passages, one at a time. Do not pre-skim them. </li>
+            <li>Press "Start Reading" once you are ready to start reading.</li>
+            <li>Read in a relaxed reading speed, OUT LOUD (whispering is also okay). </li>
+            <li>If you make any mistakes while reading, re-read that word fumbled on and keep reading.</li>
+            <li> As soon as you finish reading, press "Stop Reading".</li>
+            <li>Press "Next Treatment" to read the next passage. Repeat for all 6 passages.</li>
+            <li>After all passages have been read, you should see a results list pop up. </li>
+            <li>Copy and paste this results list into the Google Form response.</li>
+            <li>There are also "Reset" buttons. Do not touch them unless your reading got interrupted midway. </li>
+        </ul>
+        <hr>
+    </div>
+
+    <div>
+        <h3 id="progress">Progress: 1/6</h3>
+
+        <div id="text" class="passage"></div>
+
+        <button onclick="startRead()" id="startBtn">Start Reading</button>
+        <button onclick="stopRead()" id="stopBtn" disabled>Stop Reading</button>
+        <button onclick="nextTreat()" id="nextBtn" disabled>Next Treatment</button>
+        <button onclick="resetTreat()">Reset Current Reading</button>
+        <button onclick="resetExperiment()">Reset Experiment</button>
+    </div>
+
+    <div id="results">
+        <hr>
+        <h3> Please copy and paste the below list into the google form response:</h3>
+        <ul id="timeList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
