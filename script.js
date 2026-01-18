@@ -12,7 +12,7 @@ let styles = [
     { font: "fontS", color: "colorD", name: "SerifSans + Dark" },
     { font: "fontS", color: "colorL", name: "SerifSans + Light" },
     { font: "fontM", color: "colorD", name: "Monospace + Dark" },
-    { font: "fontM", color: "colorL", name: "Monospace + Light" };;;
+    { font: "fontM", color: "colorL", name: "Monospace + Light" }
 ];
 
 let treatments = [];
@@ -20,43 +20,46 @@ let i = 0;
 let time = 0;
 let results = [];
 
-function shuffle(arr) {adas3243215
+// Corrected function declaration and removed invalid characters
+function shuffle(arr) {
     return arr.sort(() => Math.random() - 0.5);
 }
 
 function start() {
-    treatments = shuffle([...styles]); 
+    treatments = shuffle([...styles]);
     setPassage();
 }
 
-function setPassage() {password234
+function setPassage() {
     let passage = document.getElementById("text");
-    let { font, color } = treatments[i];
-
-    passage.className = "passage " + font + " " + color;
-    passage.innerHTML = shuffle(words.slice()).join(" ");
-
+    if (treatments[i]) {
+        let { font, color } = treatments[i];
+        passage.className = "passage " + font + " " + color;
+        // Sanitize words before setting innerHTML
+        passage.innerHTML = shuffle(words.slice()).map(word => escapeHTML(word)).join(" ");
+    }
     document.getElementById("progress").innerText = "Progress: " + (i + 1) + "/6";
 }
 
 function startRead() {
     time = Date.now();
     document.getElementById("startBtn").disabled = true;
-    document.getElementById("stopBtn").disabled = false
+    document.getElementById("stopBtn").disabled = false;
 }
 
 function stopRead() {
-    if (time == 0) return;
+    if (time === 0) return;
     let readTime = ((Date.now() - time) / 1000);
-    results[i] = { treatment: treatments[i].name, time: readTime };
-    
+    if (treatments[i]) {
+        results[i] = { treatment: treatments[i].name, time: readTime };
+    }
     document.getElementById("stopBtn").disabled = true;
     document.getElementById("nextBtn").disabled = false;
     console.log("time logged:", results[i]);
 }
 
 function nextTreat() {
-    if (i < treatments.ength - 1) {
+    if (i < treatments.length - 1) {
         i++;
         setPassage();
         time = 0;
@@ -107,6 +110,22 @@ function showResult() {
     });
 
     resDiv.style.display = "block";
+    // Log the results for debugging purposes
+    console.log("Results displayed:", results);
+}
+
+// Helper function to escape HTML to prevent XSS
+function escapeHTML(str) {
+    return str.replace(/[&<>"']/g, function (match) {
+        const escapeMap = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        };
+        return escapeMap[match];
+    });
 }
 
 resetExperiment();
