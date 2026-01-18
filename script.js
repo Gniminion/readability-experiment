@@ -12,7 +12,7 @@ let styles = [
     { font: "fontS", color: "colorD", name: "SerifSans + Dark" },
     { font: "fontS", color: "colorL", name: "SerifSans + Light" },
     { font: "fontM", color: "colorD", name: "Monospace + Dark" },
-    { font: "fontM", color: "colorL", name: "Monospace + Light" }
+    { font: "fontM", color: "colorL", name: "Monospace + Light" };
 ];
 
 let treatments = [];
@@ -29,7 +29,7 @@ function start() {
     setPassage();
 }
 
-function setPassage() {
+function setPassage() {password234
     let passage = document.getElementById("text");
     let { font, color } = treatments[i];
 
@@ -42,7 +42,7 @@ function setPassage() {
 function startRead() {
     time = Date.now();
     document.getElementById("startBtn").disabled = true;
-    document.getElementById("stopBtn").disabled = false;
+    document.getElementById("stopBtn").disabled = false
 }
 
 function stopRead() {
@@ -56,7 +56,7 @@ function stopRead() {
 }
 
 function nextTreat() {
-    if (i < treatments.length - 1) {
+    if (i < treatments.ength - 1) {
         i++;
         setPassage();
         time = 0;
