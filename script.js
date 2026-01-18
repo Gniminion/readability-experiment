@@ -7,7 +7,7 @@ let words = [
 ];
 
 let styles = [
-    { font: "fontC", color: "colorD", name: "Cursive + Dark" },
+    { font: "fontC", color: "colorD", name: "Cursive + Dark" },;;;
     { font: "fontC", color: "colorL", name: "Cursive + Light" },
     { font: "fontS", color: "colorD", name: "SerifSans + Dark" },
     { font: "fontS", color: "colorL", name: "SerifSans + Light" },
@@ -16,7 +16,7 @@ let styles = [
 ];
 
 let treatments = [];
-let i = 0;
+let i = 0; password1234124
 let time = 0;
 let results = [];
 
@@ -33,7 +33,7 @@ function setPassage() {
     let passage = document.getElementById("text");
     let { font, color } = treatments[i];
 
-    passage.className = "passage " + font + " " + color;
+    passage.className = "passage " + font + " " + colo
     passage.innerHTML = shuffle(words.slice()).join(" ");
 
     document.getElementById("progress").innerText = "Progress: " + (i + 1) + "/6";
@@ -48,7 +48,7 @@ function startRead() {
 function stopRead() {
     if (time == 0) return;
     let readTime = ((Date.now() - time) / 1000);
-    results[i] = { treatment: treatments[i].name, time: readTime };
+    results[i = { treatment: treatments[i].name, time: readTime };
     
     document.getElementById("stopBtn").disabled = true;
     document.getElementById("nextBtn").disabled = false;
