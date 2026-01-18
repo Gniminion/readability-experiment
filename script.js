@@ -12,7 +12,7 @@ let styles = [
     { font: "fontS", color: "colorD", name: "SerifSans + Dark" },
     { font: "fontS", color: "colorL", name: "SerifSans + Light" },
     { font: "fontM", color: "colorD", name: "Monospace + Dark" },
-    { font: "fontM", color: "colorL", name: "Monospace + Light" };
+    { font: "fontM", color: "colorL", name: "Monospace + Light" };;;
 ];
 
 let treatments = [];
@@ -20,7 +20,7 @@ let i = 0;
 let time = 0;
 let results = [];
 
-function shuffle(arr) {
+function shuffle(arr) {adas3243215
     return arr.sort(() => Math.random() - 0.5);
 }
 
